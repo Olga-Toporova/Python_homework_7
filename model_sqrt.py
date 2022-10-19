@@ -1,2 +1,4 @@
+from math import sqrt
+
 def square_root(a):
-    return a ** 0,5
+    return round(sqrt(a), 2)

@@ -53,3 +53,10 @@ def div_zero(number):
         print("Делитель не может быть нулём!")
         number = try_input()
     return number
+
+def div_zero_complex(number):
+    while number == 0:
+        print("Делитель не может быть нулём!")
+        number1, number2 = try_input(), try_input()
+        number = check_input_compl(number1, number2)
+    return number

@@ -5,20 +5,20 @@ from sys import exit
 
 def hello_main():
     print("Добро пожаловать в меню!\nВыберите, с чем хотите работать:\n1 - рациональные числа;\n2 - комплексные числа;\n0 - выход из программы")
-    option = ex.verification_start(input("Выберите опцию: "))
+    option = ex.verification_start()
     return option
 
 
 def div_choice():
     print("Уточните какое деление требуется:\n1 - обычное деление;\n2 - целочисленное;\n3 - остаток от деления;\n0 - вернуться в предыдущее меню")
-    option = ex.verification_div_choisen(input("Выберите опцию: "))
+    option = ex.verification_div_choisen()
     if option == "0": rational_numbers()
     else: return option
 
 
 def rational_numbers():
     print("Вы выбрали рациональные числа.\nВыберите, какую операцию хотите осуществить:\n1 - сложение;\n2 - вычитание;\n3 - умножение;\n4 - деление;\n5 - возведение в степень;\n6 - корень из числа;\n0 - вернуться в предыдущее меню")
-    option = ex.verification_numbers(input("Выберите опцию: "))
+    option = ex.verification_numbers()
     if option == "0": 
         main_menu()
     elif option == "4":
@@ -28,7 +28,7 @@ def rational_numbers():
 
 def complex_numbers():
     print("Вы выбрали комплексные числа.\nВыберите, какую операцию хотите осуществить:\n1 - сложение;\n2 - вычитание;\n3 - умножение;\n4 - деление;\n5 - возведение в степень;\n6 - корень из числа;\n0 - вернуться в предыдущее меню")
-    option = ex.verification_numbers(input("Выберите опцию: "))
+    option = ex.verification_numbers()
     if option == 0: hello_main()
     else: main_op('c', f'{option}')
 
